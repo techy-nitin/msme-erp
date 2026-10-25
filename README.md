@@ -1,214 +1,159 @@
-# MSME ERP System
+# MSME ERP
 
-A full-stack ERP and Billing Management System developed for Micro, Small and Medium Enterprises (MSMEs). The application helps businesses manage clients, vendors, products, invoices, quotations, expenses, payments, employees, reports, and company settings from a single dashboard.
-
----
+A full-stack Enterprise Resource Planning (ERP) application built to help small and medium-sized businesses manage their business operations, financial records, invoices, payments, and reports from one place.
 
 ## Features
 
-### Dashboard
-- Business overview
-- Revenue & expense analytics
-- Account summary
-- Recent activities
+### Business Operations
 
-### Client Management
-- Add, edit and delete clients
-- GST Number support
-- Contact & address management
+- **Dashboard:** View business summaries, revenue information, and pending payments.
+- **Client Management:** Maintain customer records and access client information.
+- **Vendor Management:** Organize vendor details and related business records.
+- **Product Management:** Manage product information and categories.
+- **Employee Management:** Maintain employee records.
+- **Company Settings:** Manage company-related information.
 
-### Vendor Management
-- Vendor registration
-- Payment terms
-- Vendor details management
+### Financial Management
 
-### Product Management
-- Product catalog
-- Categories
-- GST rates
-- Pricing
+- **Invoice Management:** Create and manage invoices and invoice items.
+- **Quotation Management:** Organize quotations and their associated items.
+- **Payment Tracking:** Manage payment records and monitor outstanding payments.
+- **Expense Management:** Maintain business expense records.
+- **Accounts and Reports:** Access financial summaries and reporting features.
 
-### Invoice Management
-- Create invoices
-- Generate PDF invoices
-- Email invoices
-- Payment tracking
+### Documents and Notifications
 
-### Quotation Management
-- Create quotations
-- Generate PDF quotations
-- Convert quotation to invoice
+- **Document Management:** Handle business documents.
+- **PDF Generation:** Generate PDF documents for supported business workflows.
+- **Data Export:** Export supported reports in PDF, CSV, and Excel formats.
+- **Email Notifications:** Support email-based business notifications.
+- **WhatsApp Notifications:** Includes services for invoice and quotation messaging.
+- **Authentication:** Login, password-change functionality, and JWT-based authentication components.
 
-### Expense Management
-- Record expenses
-- Category-wise tracking
+### User Interface
 
-### Payment Management
-- Record customer payments
-- Payment history
+- **React-Based Frontend:** Built with reusable React components.
+- **Dashboard Interface:** Organized layout with navigation and data cards.
+- **Interactive Components:** Tables, forms, pagination, dropdowns, and modal dialogs.
+- **Data Visualization:** Charts for financial summaries.
+- **Dedicated Modules:** Separate pages for invoices, payments, products, clients, vendors, expenses, quotations, employees, accounts, and reports.
 
-### Accounts
-- Revenue
-- Expenses
-- Profit
-- GST summary
+## Technology Stack
 
-### Reports
-- Sales Report
-- Expense Report
-- GST Report
-- Client Report
-- Vendor Report
-- Outstanding Report
-- Profit & Loss Report
-- Employee Salary Report
-
-### Company Settings
-- Company profile
-- GST details
-- Bank details
-- Logo upload
-
-### Authentication
-- Secure login
-- Change password
-- Profile management
-
----
-
-# Tech Stack
-
-## Frontend
-- React
+### Frontend
+- React.js
+- JavaScript
 - Vite
-- Axios
-- Lucide React
+- CSS
+- npm
 
-## Backend
+### Backend
+- Java
 - Spring Boot
-- Spring Security
-- Spring Data JPA
-- Hibernate
-- Apache PDFBox
-- JavaMail
+- Maven
+- REST APIs
+- JWT-based authentication
 
-## Database
-- PostgreSQL (Supabase)
+## Project Structure
 
----
-
-# Project Structure
-
-```
+```text
 msme-erp/
-│
 ├── backend/
 │   ├── src/
-│   ├── pom.xml
-│   └── ...
-│
+│   ├── .mvn/
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   └── pom.xml
 ├── frontend/
-│   ├── src/
 │   ├── public/
+│   ├── src/
 │   ├── package.json
-│   └── ...
-│
-├── README.md
-└── .gitignore
+│   ├── package-lock.json
+│   └── vite.config.js
+├── .gitignore
+└── README.md
 ```
 
----
+## Getting Started
 
-# Installation
+### Prerequisites
 
-## Backend
+Make sure you have the following installed:
+
+- Java Development Kit (JDK), compatible with the backend configuration
+- Node.js and npm
+- Git
+- A database configured for the backend
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/techy-nitin/msme-erp.git
+cd msme-erp
+```
+
+### 2. Configure the Backend
+
+Navigate to the backend directory:
 
 ```bash
 cd backend
-mvn clean install
-mvn spring-boot:run
 ```
 
-Backend runs on:
+Configure the required database connection and application settings in the Spring Boot configuration file. Use the provided example configuration as a reference, where applicable.
 
+Keep database passwords, API keys, JWT secrets, and other sensitive information out of version control.
+
+### 3. Start the Backend
+
+On Windows:
+
+```powershell
+.\mvnw.cmd spring-boot:run
 ```
-http://localhost:8081
+
+On Linux or macOS:
+
+```bash
+./mvnw spring-boot:run
 ```
 
----
+### 4. Install Frontend Dependencies
 
-## Frontend
+Open a new terminal from the project root and navigate to the frontend directory:
 
 ```bash
 cd frontend
 npm install
+```
+
+### 5. Start the Frontend
+
+```bash
 npm run dev
 ```
 
-Frontend runs on:
+Open the local development URL displayed in the terminal by Vite.
 
-```
-http://localhost:5173
-```
+Ensure the frontend API configuration points to the correct backend address.
 
----
+## Running Backend Tests
 
-# Configuration
+From the `backend` directory, run:
 
-Before running the project, create:
-
-```
-backend/src/main/resources/application.properties
+**Windows**
+```powershell
+.\mvnw.cmd test
 ```
 
-Configure:
+**Linux/macOS**
+```bash
+./mvnw test
+```
 
-- PostgreSQL Database
-- Email SMTP
-- JWT Secret (if applicable)
-
-Do not commit sensitive credentials to GitHub.
-
----
-
-# Future Enhancements
-
-- GST Verification API
-- Inventory Management
-- Purchase Orders
-- Payroll
-- E-Invoice Integration
-- E-Way Bill
-- Multi-user Roles
-- Cloud Deployment
-
----
-
-# Screenshots
-
-Add screenshots of:
-
-- Login
-- Dashboard
-- Clients
-- Vendors
-- Products
-- Invoices
-- Quotations
-- Reports
-- Accounts
-- PDF Invoice
-
----
-
-# Author
+## Author
 
 **Nitin Sharma**
 
-Full Stack Java Developer
-
----
-
-# License
-
-This project is developed for educational and portfolio purposes.
+- GitHub: [@techy-nitin](https://github.com/techy-nitin)
+- Repository: [MSME ERP](https://github.com/techy-nitin/msme-erp)
